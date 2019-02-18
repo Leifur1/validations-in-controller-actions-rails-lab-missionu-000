@@ -6,12 +6,11 @@ class PostsController < ApplicationController
   end
 
   def edit
+
   end
 
   def update
-    if @post.save
-      @post.update(post_params)
-
+    if @post.update(post_params)
       redirect_to post_path(@post)
     else
       render :edit
